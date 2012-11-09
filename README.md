@@ -24,7 +24,7 @@ Use q() as the wrapper and pass it any Element or HTMLCollection of elements tha
  * q(nodes).hasClass('string')
  * q(el).removeClass('string')
 
- If there is no element or nodelist selected it will return 'this' back after checking for a null element or nodelist length of 0;
+If there is no element or nodelist selected it will return 'this' back after checking for a null element or nodelist length of 0;
 
 
- ### Created by Jared Williams
+Created by Jared Williams
