@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<title>Qlass.js Demo</title>
+
+<style>
+div, span, a {
+	text-decoration: none;
+	font-family: verdana;
+	font-size: 20px;
+	margin: 15px;
+}
+div, span {
+	display: block;
+}
+.thing {
+	color: #0000ff;
+}
+.red {
+	background: #cc0000;
+	color: #fff;
+	padding: 10px;
+}
+.newClass {
+	font-size: 30px;
+}
+.div-class {
+	font-family: Times new Roman;
+	color: #030;
+}
+.divClassId {
+	text-decoration: underline
+}
+.span-class {
+	font-weight: bold;
+}
+.span {
+	font-size: 32px;
+	font-weight: bold;
+}
+.link {
+	display: inline-block;
+}
+.link-class {
+	background: #ff0;
+	color: #f00;
+	text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+
+<div>Div - no class</div>
+<div class="div-class">Div - Class: div-class</div>
+<div id="div-id" class="divClassId">Div - ID: div-id + Class: divClassId</div>
+
+<span id="id-1">Span 1</span>
+<span id="id-2" class="span-class">Span 2 - Class: span-class</span>
+<span id="id-3" class="span">Span 3</span>
+
+<a href="#" class="link">Link 1</a>
+<a href="#" class="link">Link 2</a>
+<a href="#" class="link link-class">Link 3 - Class: link-class</a>
+
+<script src="qlass.js"></script>
+
+<script>
+var div = document.getElementsByTagName('div');	// NodeList all div Elements
+var span1 = document.getElementById('id-1');	// Element span 1 ID
+var span2 = document.getElementById('id-2');	// Element span 2 ID
+var span3 = document.getElementById('id-3');	// Element span 3 ID
+var a = document.querySelectorAll('.link');		// NodeList of Elements with .link class
+
+var li = document.querySelectorAll('li');		// no such NodeList
+var item = document.getElementById('thisItem'); // no such Element
+
+q(div).addClass('thing');
+q(span1).addClass('newClass');
+q(a).addClass('red');
+
+q(li).addClass('no-class');
+q(item).addClass('no-item');
+
+
+console.log( q(div).hasClass('thing') );		// true
+console.log( q(span1).hasClass('newClass') );	// true
+console.log( q(a).hasClass('red') );			// true
+console.log( q(a).hasClass('anchor') );			// false
+console.log( q(li).hasClass('thing') );			// false
+
+
+q(div).removeClass('div');			// no elements with class -do nothing
+q(span2).removeClass('span-class');
+q(a).removeClass('link');
+
+q(li).removeClass('do-nothing');	// no elements
+q(item).removeClass('do-nothing');	// no elements
+
+
+</script>
+
+</body>
+</html>
