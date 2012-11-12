@@ -6,7 +6,7 @@
  *
  * Simply select an element or elements and add or remove classes to them or check if they have a class.
  * Wrap the selectors with q().
- * ie: q(document.getElementsByTagName).addClass('myClass');
+ * ie: q(document.getElementsByTagName('div')).addClass('myClass').hasClass('myClass');
  *
  */
 (function() {
