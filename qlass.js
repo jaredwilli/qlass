@@ -125,5 +125,5 @@
 	};
 
 	// Reveal it to global object -> window
-	window.q = q;
+	window.qlass = window.q = q;
 })();
