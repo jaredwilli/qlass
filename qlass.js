@@ -12,8 +12,6 @@
 (function() {
 	var rClass = /[\n\t]/g,
         rSpace = /\s+/,
-        rReturn = /\r/g,
-        // Used for trimming whitespace
         rTrim = /^(\s|\u00A0)+|(\s|\u00A0)+$/g,
         rNodeList = /^\[object (HTMLCollection|NodeList|Object)\]$/;
 
