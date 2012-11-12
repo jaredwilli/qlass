@@ -28,17 +28,10 @@
 		return false;
 	}
 
-	function isEmptyObj(obj) {
-		for (var name in obj) {
-			return false;
-		}
-		return true;
-	}
-
 	// Constructor
 	function Qlass(selector) {
 		// Convert n to real array
-		this.selector = selector; //Array.prototype.slice.call(n);
+		this.selector = selector;
 
 		// if this isn't a null or empty object
 		if (this.selector[0] && this.selector[0].length > 0) {
@@ -64,10 +57,8 @@
 		log: function() {
             console.log(this.selector);
 
-            // Return the instance:
             return this;
         },
-
 		addClass: function(value) {
 			if (value && typeof value === 'string') {
 				var classNames = (value || '').split(rSpace);
@@ -80,7 +71,6 @@
 						// if no className exists set it and continue on
 						if (!elem.className) {
 							elem.className = value;
-							//console.log(elem);
 						} else {
 							// otherwise check value against each class for a match
 							var className = ' '+ elem.className +' ',
@@ -92,7 +82,6 @@
 								}
 							}
 							elem.className = (setClass || '').replace(rTrim, '');
-							//console.log(elem);
 						}
 					}
 				}
@@ -135,7 +124,6 @@
 			}
 			return this;
         }
-
 	};
 
 	// Reveal it to global object -> window
