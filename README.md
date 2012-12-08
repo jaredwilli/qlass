@@ -7,7 +7,7 @@ A library for performing common classy functions on elements and collections.
 
 `<div id="main" class="content js"></div>`
 
-``` JavaScript
+``` javascript
 q(document.getElementsByTagName('div')).addClass('new-class');
 
 var main = document.getElementById('main');
@@ -21,7 +21,7 @@ if (q(main).hasClass('js')) {
 
 Use `q()` as the wrapper and pass it any `Element` or `HTMLCollection` of elements that you want to add, remove or check if they have a class.
 
-``` JavaScript
+``` javascript
 q(elem).addClass('string')
 q(nodes).hasClass('string')
 q(el).removeClass('string')
