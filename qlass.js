@@ -2,13 +2,17 @@
  * Qlass.js
  *
  * by: Jared Williams
- * A library for performing common classy functions on elements and collections.
+ * http://anti-code.com
+ * 
+ * A library for performing common classy functions on elements and collections. It
+ * incorporates some techniques and practices used in jQuery that I could not find
+ * a better way of doing what already is the best way possible it could be done.
  *
- * Simply select an element or elements and add or remove classes to them or check if they have a class.
- * Wrap the selectors with q().
+ * Simply select an element or elements and add/remove classes if it hasClass.
+ * using the wrapper q(...).
  * ie: q(document.getElementsByTagName('div')).addClass('myClass').hasClass('myClass');
- *
  */
+ 
 (function() {
 	var rClass = /[\n\t]/g,
         rSpace = /\s+/,
