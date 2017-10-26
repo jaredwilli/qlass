@@ -4,9 +4,7 @@
  * by: Jared Williams
  * http://anti-code.com
  * 
- * A library for performing common classy functions on elements and collections. It
- * incorporates some techniques and practices used in jQuery that I could not find
- * a better way of doing what already is the best way possible it could be done.
+ * A library for performing common classy functions on elements and collections.
  *
  * Simply select an element or elements and add/remove classes if it hasClass.
  * using the wrapper q(...).
